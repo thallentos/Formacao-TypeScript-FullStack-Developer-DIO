@@ -1,3 +1,3 @@
 // Thallentos Banking
 
-// name, accountNumber
+// name, accountNumbe
