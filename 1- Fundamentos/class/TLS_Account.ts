@@ -12,7 +12,6 @@ export abstract class TLS_Account {
   setName = (name: string): void => {
     this.name = name;
     console.log("Nome alterado com sucesso!");
-    
   };
 
   getName = (): string => {
