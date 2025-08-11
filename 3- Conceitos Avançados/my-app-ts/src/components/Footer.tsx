@@ -1,7 +1,9 @@
+import { Center } from "@chakra-ui/react";
+
 export const Footer = () => {
     return (
-        <div>
+        <Center>
             Desenvolvido por Thalles Coelho Marques
-        </div>
+        </Center>
     );
 };
