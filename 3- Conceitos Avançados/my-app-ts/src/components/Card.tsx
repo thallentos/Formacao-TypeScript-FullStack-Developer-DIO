@@ -1,10 +1,26 @@
 import { Box, Center, Input } from "@chakra-ui/react";
 import { login } from "../services/login";
 import DButton from "./DButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { api } from "../api";
+
+interface UserData {
+  email: string;
+  password: string;
+  name: string;
+}
 
 export const Card = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [userData, setUserData] = useState<null | UserData>();
+
+  useEffect(() => {
+    const getData = async () => {
+      const data: any | UserData = await api;
+      setUserData(data);
+    };
+    getData();
+  });
 
   return (
     <Box backgroundColor="#ffffffff" borderRadius="25px" padding="15px">
