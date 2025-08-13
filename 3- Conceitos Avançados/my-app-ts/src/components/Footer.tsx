@@ -2,7 +2,7 @@ import { Center } from "@chakra-ui/react";
 
 export const Footer = () => {
     return (
-        <Center>
+        <Center color={"white"}>
             Desenvolvido por Thalles Coelho Marques
         </Center>
     );

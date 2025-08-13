@@ -3,10 +3,10 @@ import { Header } from "./Header";
 
 export const Layout = ({ children }: any) => {
   return (
-    <>
-      <Header/>
+    <div style={{backgroundColor: "#87CEEB", width: "100%", height: "100vh"}}>
+      <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
