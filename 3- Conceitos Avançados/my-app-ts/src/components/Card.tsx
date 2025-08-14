@@ -30,7 +30,7 @@ export const Card = () => {
         padding="15px"
         width={"70vh"}
       >
-        {userData === null || (userData === undefined && <h1>Loading...</h1>)}
+        {/*{userData === null || (userData === undefined && <h1>Loading...</h1>)}*/}
         <Center>
           <h1 color="#87CEEB">Faça o login</h1>
         </Center>

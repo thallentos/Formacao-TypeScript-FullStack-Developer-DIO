@@ -1,17 +1,22 @@
 // import { useState } from "react";
-import { ChakraProvider, Box, defaultSystem } from "@chakra-ui/react";
-import { Card } from "./components/Card";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Conta from "./pages/Conta";
 import { Layout } from "./components/Layout";
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
 
 function App() {
   return (
-    <ChakraProvider value={defaultSystem}>
-      <Layout>
-        <Box padding="25px">
-          <Card />
-        </Box>
-      </Layout>
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider value={defaultSystem}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/conta" element={<Conta />} />
+          </Routes>
+        </Layout>
+      </ChakraProvider>
+    </BrowserRouter>
   );
 }
 
